@@ -373,6 +373,38 @@
             font-size: 1.05rem;
         }
 
+        .cta-reassurance {
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .section-lede {
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .section-lede-close {
+            max-width: 780px;
+            margin: 3rem auto 0 auto;
+            padding: 1.75rem 2rem;
+            text-align: center;
+            color: var(--text-main);
+            font-size: 1.35rem;
+            line-height: 1.5;
+            font-weight: 500;
+            background: rgba(56, 189, 248, 0.07);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 10px;
+        }
+
+        .section-lede-close strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -525,11 +557,9 @@
         <div class="container nav-links">
             <a href="/the-system" class="is-current" aria-current="page">The System</a>
             <a href="/why-leaks-happen">Why Leaks Happen</a>
-            <a href="#">Case Studies &amp; Proof</a>
-            <a href="#">Pricing / Audit</a>
-            <a href="#" class="nav-cta">
+            <a href="#audit" class="nav-cta">
                 <span class="btn-icon" aria-hidden="true">&#128197;</span>
-                <span>Schedule Audit ($1,500)</span>
+                <span>Book My Free Call</span>
             </a>
         </div>
     </nav>
@@ -570,13 +600,63 @@
                 </div>
             </div>
 
-            <h1>Stop Guessing Where Your Client's Pipeline is Leaking. Start Scaling With Predictable Data Infrastructure.</h1>
-            <p class="hero-sub">You don't need another generic dashboard, and you certainly don't need a bloated agency team handing your accounts off to junior associates. You need precision backed by 25+ years of experience.</p>
+            <h1>Stop Guessing Where Your Pipeline is Leaking. Start Scaling With Predictable Data Infrastructure.</h1>
+            <p class="hero-sub">You don't need another generic dashboard, and you certainly don't need a bloated agency team handing your work off to junior associates. You need precision backed by 25+ years of experience.</p>
 
-            <a href="#" class="btn-schedule">
+            <a href="#audit" class="btn-schedule">
                 <span class="btn-icon" aria-hidden="true">&#128197;</span>
-                <span>Schedule Your Pipeline Audit ($1,500)</span>
+                <span>Book My Free Call</span>
             </a>
+
+            <p class="cta-reassurance">The call is free and there is no obligation. All pricing is listed below, so you know exactly what the work costs before we ever talk.</p>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">How I Fix It: The 4-Step Execution Framework</h2>
+            <p class="section-subtitle">A systematic, predictable pathway designed to restore data hygiene and accelerate revenue growth.</p>
+
+            <div class="step-grid">
+                <div class="card">
+                    <span class="step-number">Step 01</span>
+                    <h3>The Technical Data &amp; Pipeline Audit</h3>
+                    <ul>
+                        <li><strong>The Deliverable:</strong> A comprehensive, forensic teardown of your tracking architecture and funnel.</li>
+                        <li><strong>What I Analyze:</strong> GA4 connections and conversion tracking, CRM lead capture and handoff, funnel flow, and landing page conversion.</li>
+                        <li><strong>The Result:</strong> Action report identifying hidden leaks, delivered within <strong>5 to 7 business days</strong>.</li>
+                        <li><strong>Investment:</strong> $1,500 per pipeline.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="step-number">Step 02</span>
+                    <h3>The Build</h3>
+                    <ul>
+                        <li><strong>The Fix:</strong> I quote the remediation directly from your audit findings. Conversion tracking configured so every form submission is captured and counted, landing pages reworked around one clear action, CRM organized into real audience segments, automated nurture activated so leads stop going cold, and retargeting set up so you can reach the visitors who leave without converting.</li>
+                        <li><strong>Who Executes:</strong> Your internal team against my direction or I quote the work and I do it. Either way it gets fixed.</li>
+                        <li><strong>The Result:</strong> Every lead captured and counted, a front door that is easy to find, and a way to follow up with everyone who leaves.</li>
+                        <li><strong>Investment:</strong> Scoped and quoted after the audit, priced against what is actually broken.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="step-number">Step 03</span>
+                    <h3>The Command Center</h3>
+                    <ul>
+                        <li><strong>What I Build:</strong> Your pipeline wired into the Fischer Revenue System Command Center. This includes a custom dashboard, prospect tracker, follow up tracker, customizable to do list, client comms tracker, client history, invoice reminders, pipeline analytics and more.</li>
+                        <li><strong>The Monitoring:</strong> The system watches your conversion tracking, your pipeline and posts an alert on your dashboard when tracking breaks or follow-ups go quiet.</li>
+                        <li><strong>The Result:</strong> One place to see pipeline health instead of five subscriptions and manual checks.</li>
+                        <li><strong>Investment:</strong> $249/mo. Additional integrations or features beyond this list are quoted separately.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="step-number">Step 04</span>
+                    <h3>Ongoing Oversight - Optional ($1,049/mo)</h3>
+                    <ul>
+                        <li><strong>The Oversight:</strong> The system watches your pipeline and I watch the system.</li>
+                        <li><strong>What You Get:</strong> Weekly and monthly reports on funnel performance against your goals, plus my recommendations on what to fix and optimize next.</li>
+                        <li><strong>The Result:</strong> When something breaks, you hear about it from me, not from a missed quarter.</li>
+                        <li><strong>Investment:</strong> $1,049/mo.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="section container">
@@ -586,55 +666,49 @@
             <div class="grid-3">
                 <div class="card">
                     <h3>The Attribution Blind Spot</h3>
-                    <p>GA4 says campaigns are crushing it, but the client's CRM pipeline is completely dry. Nobody knows where the data loop actually broke.</p>
+                    <p>Traffic and engagement look strong, but the CRM pipeline is dry. Content, landing pages, and social were never wired into one measurable path, so nobody can say what actually produced revenue.</p>
                 </div>
                 <div class="card">
                     <h3>The Unmonitored Lead Leak</h3>
-                    <p>High-intent leads sit forgotten in unmonitored CRM inboxes for weeks because manual team oversight inevitably fails.</p>
+                    <p>High-intent leads sit forgotten in unmonitored inboxes for weeks. On long sales cycles, follow-up slips and nobody finds out until the quarter is already gone.</p>
                 </div>
                 <div class="card">
                     <h3>The Software Franken-Stack</h3>
-                    <p>Duct-taping 5 different subscriptions together (project boards, trackers, reporting sheets) just to run a handful of high-ticket accounts.</p>
+                    <p>Duct-taping 5 different subscriptions together (project boards, trackers, reporting sheets) just to run a handful of high-ticket programs.</p>
                 </div>
                 <div class="card">
-                    <h3>No "Command Center"</h3>
-                    <p>Nothing to quickly review a bird's-eye view of the health of your clients' accounts to catch issues before they churn - without hours of platform hopping and checks.</p>
+                    <h3>No Single Owner of the Engine</h3>
+                    <p>Everyone touches part of it and nobody owns whether it works end to end. There is no bird's-eye view to catch a problem before it costs you a quarter - without hours of platform hopping and checks.</p>
                 </div>
             </div>
         </section>
 
         <section class="section container">
-            <h2 class="section-title">How We Fix It: The 3-Step Execution Framework</h2>
-            <p class="section-subtitle">A systematic, predictable pathway designed to restore data hygiene and accelerate client revenue growth.</p>
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Why Me</h2>
+            <p class="section-lede">Twenty-five years in paid search and marketing operations means I have seen how these systems break from the inside. I am not running a playbook I read somewhere. I know what a broken conversion event looks like before I open the account, and I know which questions find the leak fastest.</p>
 
-            <div class="step-grid">
+            <p class="section-lede" style="margin-bottom: 3rem;">On a recent audit for a fractional CMO with a long track record and a strong reputation in her vertical, here is what nobody had caught:</p>
+
+            <div class="grid-3">
                 <div class="card">
-                    <span class="step-number">Step 01</span>
-                    <h3>The Technical Data &amp; Pipeline Audit</h3>
-                    <ul>
-                        <li><strong>The Deliverable:</strong> A comprehensive, forensic teardown of your client's tracking architecture.</li>
-                        <li><strong>What We Analyze:</strong> Direct access review of CRM, GA4, GTM, and conversion plumbing.</li>
-                        <li><strong>The Result:</strong> Action report identifying hidden leaks, delivered within <strong>5 to 7 business days</strong>.</li>
-                        <li><strong>Investment:</strong> $1,500 per client account/CRM pipeline.</li>
-                    </ul>
+                    <h3>Zero Leads Being Counted</h3>
+                    <p>Not one real lead was registering as a conversion on either the main site or the campaign landing page. The only event configured was a leftover purchase goal that had never fired and did not apply to the business.</p>
                 </div>
                 <div class="card">
-                    <span class="step-number">Step 02</span>
-                    <h3>System Command Center Implementation</h3>
-                    <ul>
-                        <li><strong>The Fix:</strong> We clean up the plumbing, map tracking logic correctly, and wire accounts into an automated operations center.</li>
-                        <li><strong>The Result:</strong> Total visibility over lead health, automated alerts for stagnant opportunities, and absolute data hygiene.</li>
-                    </ul>
+                    <h3>A Form That Swallowed Submissions</h3>
+                    <p>I ran a live test submission and it registered nothing. Every person who filled out that form had disappeared without a trace.</p>
                 </div>
                 <div class="card">
-                    <span class="step-number">Step 03</span>
-                    <h3>Ongoing Protection &amp; Scale</h3>
-                    <ul>
-                        <li><strong>Self-Serve Software ($249/mo):</strong> Keep command centers running smoothly with automated tracking and alerts.</li>
-                        <li><strong>Hybrid Advisory Tier ($1,049/mo):</strong> Monthly async oversight and direct strategic guidance from a 25-year veteran.</li>
-                    </ul>
+                    <h3>Follow-Up Sitting in Draft</h3>
+                    <p>Two automated follow-up sequences existed in the system. Both had been built and never activated, one of them more than a year earlier. Every inbound lead went cold on its own.</p>
+                </div>
+                <div class="card">
+                    <h3>An Asset Nobody Knew Was There</h3>
+                    <p>The CRM held thousands of qualified decision-makers, several times what the team believed they had. The data was there. It had never been organized into segments anyone could actually campaign against.</p>
                 </div>
             </div>
+
+            <p class="section-lede-close">She did not have a traffic problem. She had a <strong>measurement problem</strong>, and it had been costing her for years. <strong>That is what the audit is for.</strong></p>
         </section>
 
         <section class="section container">
@@ -643,7 +717,7 @@
 
             <div class="testimonial-grid">
                 <blockquote>
-                    <p>"I had no idea where my new leads were going - I just thought I was having a slow year. After one audit, what Erica uncovered was astonishing! Now I can re-group and run my pipeline - and my clients' pipelines - with confidence and way less stress."</p>
+                    <p>"I had no idea where my new leads were going - I just thought I was having a slow year. After one audit, what Erica uncovered was astonishing! Now I can re-group and run my pipeline with confidence and way less stress."</p>
                     <cite>- Boutique Agency Owner</cite>
                 </blockquote>
                 <blockquote>
@@ -653,13 +727,13 @@
             </div>
         </section>
 
-        <section class="cta-footer container">
+        <section class="cta-footer container" id="audit">
             <h2>Ready to Stop Losing Revenue to Broken Infrastructure?</h2>
-            <p>Secure your client pipelines and eliminate administrative chaos this week.</p>
+            <p>Secure your pipeline and eliminate administrative chaos this week.</p>
 
-            <a href="#" class="btn-schedule">
+            <a href="mailto:contact@fischerrevenuesystem.com" class="btn-schedule">
                 <span class="btn-icon" aria-hidden="true">&#128197;</span>
-                <span>Schedule Your Pipeline Audit ($1,500)</span>
+                <span>Book My Free Call</span>
             </a>
         </section>
     </main>

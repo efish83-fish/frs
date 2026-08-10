@@ -136,6 +136,13 @@
             transition: color 0.2s;
         }
 
+        .main-nav a.is-current {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            padding: 0.4rem 0.85rem;
+        }
+
         .main-nav a:hover {
             color: var(--accent);
         }
@@ -1035,5 +1042,44 @@
         })();
     </script>
 
+
+    <script>
+        (function () {
+            var links = Array.prototype.slice.call(
+                document.querySelectorAll('.nav-links a[href^="#"]')
+            );
+            if (!links.length || !('IntersectionObserver' in window)) return;
+
+            var map = {};
+            var sections = [];
+            links.forEach(function (link) {
+                var el = document.getElementById(link.getAttribute('href').slice(1));
+                if (el) { map[el.id] = link; sections.push(el); }
+            });
+            if (!sections.length) return;
+
+            function clear() {
+                links.forEach(function (l) {
+                    l.classList.remove('is-current');
+                    l.removeAttribute('aria-current');
+                });
+            }
+
+            var visible = {};
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    visible[entry.target.id] = entry.isIntersecting;
+                });
+                var active = sections.filter(function (sec) { return visible[sec.id]; })[0];
+                clear();
+                if (active && map[active.id]) {
+                    map[active.id].classList.add('is-current');
+                    map[active.id].setAttribute('aria-current', 'true');
+                }
+            }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+            sections.forEach(function (sec) { observer.observe(sec); });
+        })();
+    </script>
 </body>
 </html>
